@@ -1,6 +1,13 @@
 OusamakingWeb::Application.routes.draw do
 
-  root :to => "home#index"
+  resources :friends
+
+  devise_for :users
+  get 'friends', :to => 'friends#index', :as => :user_root 
+  get "home/index"
+
+  root :to => "friends#index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
