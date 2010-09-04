@@ -27,7 +27,7 @@ OusamakingWeb::Application.configure do
 
   #for smtp 
   config.action_mailer.smtp_settings = {
-      :address        => "localhost.localdomain"
+      :address        => "localhost.localdomain",
       :port           => 587,
       :domain         => "localdomain",
       :user_name      => "*****",
