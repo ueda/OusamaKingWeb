@@ -10,11 +10,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100904150545) do
+ActiveRecord::Schema.define(:version => 20100905135519) do
 
   create_table "friends", :force => true do |t|
     t.string   "name"
     t.string   "email"
+    t.text     "memo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "groups", :force => true do |t|
+    t.string   "name"
     t.text     "memo"
     t.datetime "created_at"
     t.datetime "updated_at"

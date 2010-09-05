@@ -12,9 +12,9 @@ pre {
   font-size: 11px;
 }
 
-a { color: #8FA880; }
-a:visited { color: #8FA880; }
-a:hover { color: #8FA880; background-color:#000; }
+a { color: #8FA880; text-decoration: none; }
+a:visited { color: #8FA880; text-decoration: none;}
+a:hover { color: #8FA880; background-color:#000; text-decoration: none;}
 
 div.field, div.actions {
   margin-bottom: 10px;
@@ -25,9 +25,14 @@ div.field, div.actions {
 }
 
 .field_with_errors {
+  /*
   padding: 2px;
   background-color: #ff7373 ;
   display: table;
+  */
+  color: #ff7373;
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 #error_explanation {
