@@ -9,7 +9,12 @@
   <b>Memo:</b>
   <%= @group.memo %>
 </p>
-
-
+<p>
+  <b>参加者:</b>
+	<ul>
+	<% for friend in @group.friends %>
+		<li><%= mail_to friend.email, friend.name %></li>
+	<% end %>
+	</ul>
 <%= link_to 'Edit', edit_group_path(@group) %> |
 <%= link_to 'Back', groups_path %>

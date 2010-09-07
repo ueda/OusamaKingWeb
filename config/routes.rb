@@ -4,7 +4,7 @@ OusamakingWeb::Application.routes.draw do
   resources :friends
 
   devise_for :users
-  get 'friends', :to => 'friends#index', :as => :user_root 
+  get 'friends', :to => 'groups#index', :as => :user_root 
   get "home/index"
 
   root :to => "groups#index"

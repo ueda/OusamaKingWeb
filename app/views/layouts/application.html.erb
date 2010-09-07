@@ -10,10 +10,14 @@
 <h1><%= link_to "Ousama King", root_path %></h1>
 <small>Made in Japan. The King of the game. </small>
 <hr/>
-<p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 <%= yield %>
-
+<hr/>
+[<%= link_to "groups", groups_path %>]
+[<%= link_to "friends", friends_path %>]
+<% if user_signed_in? %>
+[<%= link_to "logout", destroy_user_session_path %>]
+<% end %>
 <hr/>
 <small>Three One Systems, Inc. All rights reserved.</small>
 </body>
