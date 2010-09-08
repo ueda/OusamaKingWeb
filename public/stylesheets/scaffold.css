@@ -65,23 +65,23 @@ div.field, div.actions {
 }
 
 table.list {
-    border: 1px #E3E3E3 solid;
-    border-collapse: collapse;
-    border-spacing: 0;
+  border: 1px #E3E3E3 solid;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 table.list th {
-    padding: 2px;
-    border: #E3E3E3 solid;
-    border-width: 0 0 1px 1px;
-    background: #F5F5F5;
-    font-weight: bold;
-    line-height: 120%;
-    text-align: center;
+  padding: 5px;
+  border: #E3E3E3 solid;
+  border-width: 0 0 1px 1px;
+  background: #F5F5F5;
+  font-weight: bold;
+  line-height: 120%;
+  text-align: center;
 }
 table.list td {
-    padding: 2px;
-    border: 1px #E3E3E3 solid;
-    border-width: 0 0 1px 1px;
-    text-align: left;
+  padding: 5px;
+  border: 1px #E3E3E3 solid;
+  border-width: 0 0 1px 1px;
+  text-align: left;
 }

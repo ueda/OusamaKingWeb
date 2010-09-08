@@ -26,7 +26,8 @@ class FriendsController < ApplicationController
   # GET /friends/new.xml
   def new
     @friend = Friend.new
-
+		@friend.group_id = params[:friend][:group_id].to_i
+		
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @friend }
