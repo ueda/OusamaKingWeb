@@ -3,10 +3,10 @@
 <table class="list">
   <tr>
     <th>Group</th>
+    <th>Sex</th>
     <th>Name</th>
     <th>Email</th>
     <th>Memo</th>
-    <th></th>
     <th></th>
     <th></th>
   </tr>
@@ -14,10 +14,10 @@
 <% @friends.each do |friend| %>
   <tr>
     <td><%= friend.group.name if friend.group %></td>
+    <td><%= friend.sex.upcase if friend.sex %></td>
     <td><%= friend.name %></td>
     <td><%= friend.email %></td>
     <td><%= friend.memo %></td>
-    <td><%= link_to 'Show', friend %></td>
     <td><%= link_to 'Edit', edit_friend_path(friend) %></td>
     <td><%= link_to 'Destroy', friend, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
