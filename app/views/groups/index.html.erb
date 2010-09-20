@@ -1,28 +1,24 @@
-<h1>Groups</h1>
 <p>
-<%= link_to '新たな「会合」勃発', new_group_path %>
+<%= link_to '+ Group', new_group_path, "class"=>"mini_button" %>
 </p>
-<table class="list">
-  <tr>
-    <th>Name</th>
-    <th>Memo</th>
-		<th>勃発日</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<h2>Groups</h2>
 <% @groups.each do |group| %>
-  <tr>
-    <td><%= group.name %></td>
-    <td><%= truncate(group.memo, :length=>10) %></td>
-    <td><%= simple_format_time(group.created_at).html_safe %></td>
-    <td><%= link_to '修正', edit_group_path(group) %></td>
-    <td><%= link_to 'けす', group, :confirm => 'Are you sure?', :method => :delete %></td>
-    <td><%= link_to '参加者追加', new_friend_path("friend[group_id]"=>group.id) %></td>
-  </tr>
+<div class="group_outer">
+  <h3><%= group.name %></h3>
+  <div class="group_explanation">
+  <div class="small">
+    <%=simple_format(group.memo) %>
+  </div>
+  </div>
+  <ul>
+    <% group.friends.each do |friend| %> 
+    <li><%= friend.sex == 'm' ? "<span class=\"male\">#{friend.name}(♂)</span>".html_safe : "<span class=\"female\">#{friend.name}(♀)</span>".html_safe %></li>
+    <% end %>
+  </ul>
+  <%= link_to '+ member', new_friend_path("friend[group_id]"=>group.id), :class=>"mini_button" %>
+  <%= link_to 'e modify', edit_group_path(group) , :class=>"mini_button" %> 
+  <%= link_to '- delete', group, :confirm => 'Are you sure?', :method => :delete, :class=>"mini_button" %> 
+</div>
 <% end %>
-</table>
-
 <br />
 

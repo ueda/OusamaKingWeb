@@ -26,7 +26,7 @@ class FriendsController < ApplicationController
   # GET /friends/new.xml
   def new
     @friend = Friend.new
-		@friend.group_id = params[:friend][:group_id].to_i
+		@friend.group_id = params[:friend][:group_id].to_i if params[:friend] && params[:friend][:group_id]
 		
     respond_to do |format|
       format.html # new.html.erb
@@ -46,7 +46,8 @@ class FriendsController < ApplicationController
 
     respond_to do |format|
       if @friend.save
-        format.html { redirect_to(@friend, :notice => 'Friend was successfully created.') }
+        #format.html { redirect_to(@friend, :notice => 'Friend was successfully created.') }
+        format.html { redirect_to(@friend.group, :notice => 'Friend was successfully created.') }
         format.xml  { render :xml => @friend, :status => :created, :location => @friend }
       else
         format.html { render :action => "new" }

@@ -3,7 +3,7 @@ class GroupsController < ApplicationController
   # GET /groups
   # GET /groups.xml
   def index
-    @groups = Group.all(:order=>"id desc")
+    @groups = Group.all(:order=>"id desc",:limit=>5)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -61,7 +61,8 @@ class GroupsController < ApplicationController
 
     respond_to do |format|
       if @group.update_attributes(params[:group])
-        format.html { redirect_to(@group, :notice => 'Group was successfully updated.') }
+        #format.html { redirect_to(@group, :notice => 'Group was successfully updated.') }
+        format.html { redirect_to(groups_path, :notice => "Group #{@group.name} was successfully updated.") }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
