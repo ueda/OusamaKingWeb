@@ -1,0 +1,11 @@
+Hi <%= @friend.name %>
+Thank you for joining us!
+
+Group: <%= @friend.group.name %>
+Scheduled at: <%= @friend.group.scheduled_at %>
+Members: 
+  <% @friend.group.friends.each do |friend| %>
+  <%= friend.name %> 
+  <% end %>
+
+

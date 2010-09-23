@@ -14,19 +14,19 @@
   <div class="field">
     <%= f.label :sex %><br />
     <%= f.radio_button(:sex, "f") %>female
-    <%= f.radio_button(:sex, "m") %>devil
+    <%= f.radio_button(:sex, "m") %>male
   </div>
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.text_field :name, :size=>40 %>
+    <%= f.text_field :name, :class=>'inputbox' %>
   </div>
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.text_field :email, :size=>40 %>
+    <%= f.text_field :email, :class=>'inputbox' %>
   </div>
   <div class="field">
     <%= f.label :memo %><br />
-    <%= f.text_area :memo, :size=>"40x3"%>
+    <%= f.text_area :memo, :rows=>5, :class=>'inputbox' %>
   </div>
   <div class="field">
     <%= f.label :group_id %><br />

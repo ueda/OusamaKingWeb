@@ -82,4 +82,16 @@ class GroupsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  def current_status 
+    @group = Group.find(params[:id])
+    @group.friends.each do |friend|
+      GroupMailer.current_status(friend).deliver 
+    end 
+    respond_to do |format|
+        format.html { redirect_to(groups_path, :notice => "Email was sent to Group #{@group.name}.") }
+        format.xml  { head :ok }
+    end
+  end
+
 end

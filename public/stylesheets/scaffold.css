@@ -1,9 +1,14 @@
 body { background-color: #fff; color: #000; }
 
-body, p, ol, ul, td {
+body, p, ol, ul, td, textarea, input  {
   font-family: helvetica, verdana, arial, sans-serif;
   font-size:   13px;
   line-height: 150%; 
+}
+
+.inputbox {
+  border: 1px solid #000;
+  width: 300px;
 }
 
 pre {
@@ -41,7 +46,7 @@ div.field, div.actions {
   padding: 7px;
   padding-bottom: 0;
   margin-bottom: 20px;
-  background-color: #000;
+  background-color: #fff;
 }
 
 #error_explanation h2 {
@@ -86,11 +91,11 @@ table.list td {
   text-align: left;
 }
 
-.male {
+.male , .male a {
     color: #1047A9;
 }
 
-.female {
+.female , .female a {
     color: #EB6AA3;
 }
 

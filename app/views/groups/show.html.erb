@@ -10,7 +10,7 @@
   <%= @group.memo %>
 </p>
 <p>
-  <b>参加者:</b>
+  <b>friends:</b>
 	<ul>
 	<% for friend in @group.friends %>
 		<li><%= mail_to friend.email, friend.name %></li>

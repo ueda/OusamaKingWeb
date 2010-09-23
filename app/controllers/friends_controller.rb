@@ -46,8 +46,7 @@ class FriendsController < ApplicationController
 
     respond_to do |format|
       if @friend.save
-        #format.html { redirect_to(@friend, :notice => 'Friend was successfully created.') }
-        format.html { redirect_to(@friend.group, :notice => 'Friend was successfully created.') }
+        format.html { redirect_to(groups_path, :notice => "Group #{@friend.group.name} was updated.") }
         format.xml  { render :xml => @friend, :status => :created, :location => @friend }
       else
         format.html { render :action => "new" }

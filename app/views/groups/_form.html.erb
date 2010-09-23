@@ -13,11 +13,19 @@
 
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :class=>'inputbox' %>
   </div>
   <div class="field">
     <%= f.label :memo %><br />
-    <%= f.text_area :memo, :size=>"40x5"%>
+    <%= f.text_area :memo, :rows=>5, :class=>'inputbox' %>
+  </div>
+  <div class="field">
+    <%= f.label :place %><br />
+    <%= f.text_field :place, :class=>'inputbox' %>
+  </div>
+  <div class="field">
+    <%= f.label :scheduled_at %><br />
+    <%= f.datetime_select :scheduled_at, :include_blank=>true, :start_year=>Date.today.year %>
   </div>
   <div class="actions">
     <%= f.submit %>

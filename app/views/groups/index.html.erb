@@ -1,10 +1,19 @@
 <p>
-<%= link_to '+ Group', new_group_path, "class"=>"mini_button" %>
+<%= link_to '[+] Group', new_group_path, "class"=>"mini_button" %>
 </p>
 <h2>Groups</h2>
+<div class="small">Only current 5 groups will be shown. I hope it's enough for you.</div>
 <% @groups.each do |group| %>
 <div class="group_outer">
   <h3><%= group.name %></h3>
+  <div class="small">
+  <% if group.place && !group.place.blank? %>
+    at <%= group.place %>
+  <% end %>
+  <% if group.scheduled_at && !group.scheduled_at.nil? %>
+    scheduled at <%= simple_time_format(group.scheduled_at) %>
+  <% end %>
+  </div>
   <div class="group_explanation">
   <div class="small">
     <%=simple_format(group.memo) %>
@@ -12,12 +21,15 @@
   </div>
   <ul>
     <% group.friends.each do |friend| %> 
-    <li><%= friend.sex == 'm' ? "<span class=\"male\">#{friend.name}(♂)</span>".html_safe : "<span class=\"female\">#{friend.name}(♀)</span>".html_safe %></li>
+    <li>
+    <span class="<%= friend.sex == 'm' ? "male" : "female" %>"><%= friend.name %>&nbsp;<%= friend.sex == 'm' ? "♂" : "♀" %>&nbsp;(<%= mail_to(friend.email, friend.email)  %>)</span>
+    </li>
     <% end %>
   </ul>
-  <%= link_to '+ member', new_friend_path("friend[group_id]"=>group.id), :class=>"mini_button" %>
-  <%= link_to 'e modify', edit_group_path(group) , :class=>"mini_button" %> 
-  <%= link_to '- delete', group, :confirm => 'Are you sure?', :method => :delete, :class=>"mini_button" %> 
+  <%= link_to '[+] member', new_friend_path("friend[group_id]"=>group.id), :class=>"mini_button" %>
+  <%= link_to '[e] edit', edit_group_path(group) , :class=>"mini_button" %> 
+  <%= link_to '[-] delete', group, :confirm => 'Are you sure?', :method => :delete, :class=>"mini_button" %> 
+  <%= link_to '[m] mail current status', current_status_group_path(group), :confirm => 'Are you sure?', :method => :invite, :class=>"mini_button" %> 
 </div>
 <% end %>
 <br />

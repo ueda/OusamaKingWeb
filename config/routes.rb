@@ -8,6 +8,8 @@ OusamakingWeb::Application.routes.draw do
   get "home/index"
 
   root :to => "groups#index"
+  
+  match 'groups/current_status/:id' => 'groups#current_status', :as => :current_status_group
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
