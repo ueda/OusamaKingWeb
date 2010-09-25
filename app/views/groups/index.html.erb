@@ -1,8 +1,6 @@
-<p>
-<%= link_to '[+] Group', new_group_path, "class"=>"mini_button" %>
-</p>
 <h2>Groups</h2>
 <div class="small">Only current 5 groups will be shown. I hope it's enough for you.</div>
+<%= link_to '[+] Group', new_group_path, "class"=>"mini_button" %>
 <% @groups.each do |group| %>
 <div class="group_outer">
   <h3><%= group.name %></h3>
@@ -23,6 +21,8 @@
     <% group.friends.each do |friend| %> 
     <li>
     <span class="<%= friend.sex == 'm' ? "male" : "female" %>"><%= friend.name %>&nbsp;<%= friend.sex == 'm' ? "♂" : "♀" %>&nbsp;(<%= mail_to(friend.email, friend.email)  %>)</span>
+    <%= link_to '[e] edit', edit_friend_path(friend), :class=>"mini_button"  %>
+    <%= link_to '[d] destroy', friend, :confirm => 'Are you sure?', :method => :delete, :class=>"mini_button" %>
     </li>
     <% end %>
   </ul>

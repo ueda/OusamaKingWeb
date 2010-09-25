@@ -4,7 +4,7 @@ class GroupMailer < ActionMailer::Base
 
   def current_status(friend)
     @friend = friend
-    mail(:to => friend.email) do |format|
+    mail(:to => friend.email,:subject=>friend.group.name) do |format|
       format.text
     end
   end

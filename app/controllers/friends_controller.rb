@@ -62,7 +62,7 @@ class FriendsController < ApplicationController
 
     respond_to do |format|
       if @friend.update_attributes(params[:friend])
-        format.html { redirect_to(@friend, :notice => 'Friend was successfully updated.') }
+        format.html { redirect_to(groups_path, :notice => "Group #{@friend.group.name} was updated.") }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
