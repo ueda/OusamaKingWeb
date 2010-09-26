@@ -6,10 +6,14 @@
   <h3><%= group.name %></h3>
   <div class="small">
   <% if group.place && !group.place.blank? %>
-    at <%= group.place %>
+    Place: <%= group.place %>
+  <% else %>
+    Place: (not decided)
   <% end %>
   <% if group.scheduled_at && !group.scheduled_at.nil? %>
-    scheduled at <%= simple_time_format(group.scheduled_at) %>
+    Scheduled at: <%= simple_time_format(group.scheduled_at) %>
+  <% else %>
+    Scheduled at: (not decided)
   <% end %>
   </div>
   <div class="group_explanation">
