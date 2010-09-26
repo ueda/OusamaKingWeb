@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100920144533) do
+ActiveRecord::Schema.define(:version => 20100926140310) do
 
   create_table "friends", :force => true do |t|
     t.string   "name"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20100920144533) do
     t.datetime "updated_at"
     t.integer  "group_id"
     t.string   "sex",        :limit => 1
+    t.integer  "created_by"
   end
 
   create_table "groups", :force => true do |t|
@@ -29,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20100920144533) do
     t.datetime "updated_at"
     t.string   "place"
     t.datetime "scheduled_at"
+    t.integer  "created_by"
   end
 
   create_table "users", :force => true do |t|
