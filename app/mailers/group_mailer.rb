@@ -1,6 +1,6 @@
 class GroupMailer < ActionMailer::Base
   default :from => "no-reply@tos.co.jp",
-          :return_path => 'yukiwo.u+OusamakingAdmin@gmail.com'
+          :return_path => 'tos.ueda+OusamakingAdmin@gmail.com'
 
   def current_status(friend)
     @friend = friend
