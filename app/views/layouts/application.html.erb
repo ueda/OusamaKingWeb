@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>OusamakingWeb</title>
+  <title>Ousama King - 飲み会幹事さんお助けサービス </title>
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
@@ -9,8 +9,7 @@
 <body>
 <div id="main">
 <div id="header">
-<h1><%= link_to "Ousama King", root_path %></h1>
-<span class="small">Made in Japan. The King of the game. </span>
+<h1><%= link_to "Ousama King", root_path %> &alpha;バージョン</h1>
 <div align="right">
   [<%= link_to "top", root_path %>]
 <% if user_signed_in? %>
@@ -19,12 +18,11 @@
 </div>
 </div>
 <p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 <%= yield %>
 <div id="footer">
-[<%= link_to "groups", groups_path %>]
-[<%= link_to "friends", friends_path %>]
-<br>
 <span class="small">Three One Systems, Inc. All rights reserved.</span>
+<br>
 </div>
 </div>
 </body>

@@ -1,0 +1,20 @@
+ja:
+  hello: 'こんにちわ。'
+  Sign in: 'ログイン'
+  'Forgot your password?': "パスワードをお忘れの方"
+  'Sign up': '無料会員登録'
+  "Didn't receive confirmation instructions?": "確認メールが届かない方"
+  attributes:
+    created_at: "作成日"
+    updated_at: "更新日"
+    email: "メールアドレス"
+    password: 'パスワード'
+  helpers:
+    label:
+      user:
+        remember_me: "ログイン状態を保存する"
+        password_confirmation: "パスワードの確認"
+      group:
+        scheduled_at: "開催予定日"
+        place: "場所"
+

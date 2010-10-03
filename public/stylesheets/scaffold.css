@@ -2,7 +2,7 @@ body { background-color: #fff; color: #000; }
 
 body, p, ol, ul, td, textarea, input  {
   font-family: helvetica, verdana, arial, sans-serif;
-  font-size:   13px;
+  font-size:   14px;
   line-height: 150%; 
 }
 
@@ -20,6 +20,12 @@ pre {
 a { color: #000; text-decoration: underline; }
 a:visited { color: #000; text-decoration: underline;}
 a:hover { color: #fff; background-color:#000; text-decoration: underline;}
+
+h1 { font-size: 2.0em; font-weight: bold;}
+h2 { font-size: 1.2em; font-weight: bold;}
+h3 { font-size: 1.0em; font-weight: bold;}
+h4 { font-size: 1.0em; font-weight: bold;}
+h5 { font-size: 1.0em; font-weight: bold;}
 
 div.field, div.actions {
   margin-bottom: 10px;
@@ -115,6 +121,8 @@ table.list td {
   padding: 10px;
   background-color: #000;
   color: #fff;
+  text-align: center;
+  line-height: 120%;
 }
 
 #footer a{

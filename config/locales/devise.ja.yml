@@ -1,7 +1,7 @@
-en:
+ja:
   errors:
     messages:
-      not_found: "not found"
+      not_found: "みつかりません。"
       already_confirmed: "was already confirmed"
       not_locked: "was not locked"
 
@@ -10,13 +10,13 @@ en:
       unauthenticated: 'You need to sign in or sign up before continuing.'
       unconfirmed: 'You have to confirm your account before continuing.'
       locked: 'Your account is locked.'
-      invalid: 'Invalid email or password.'
+      invalid: 'メールアドレスかパスワードが正しくありません。'
       invalid_token: 'Invalid authentication token.'
       timeout: 'Your session expired, please sign in again to continue.'
       inactive: 'Your account was not activated yet.'
     sessions:
-      signed_in: 'Signed in successfully.'
-      signed_out: 'Signed out successfully.'
+      signed_in: 'ログインしました。'
+      signed_out: 'ログアウトしました。'
     passwords:
       send_instructions: 'You will receive an email with instructions about how to reset your password in a few minutes.'
       updated: 'Your password was changed successfully. You are now signed in.'
@@ -38,4 +38,5 @@ en:
       unlock_instructions:
         subject: 'Unlock Instructions'
     terms:
-      remember_me: "remember me"
+      remember_me: "ログイン情報を記憶する"
+

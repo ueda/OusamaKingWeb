@@ -4,18 +4,18 @@
 <% @groups.each do |group| %>
 <div class="group_outer">
   <h3><%= group.name %></h3>
-  <div class="small">
+  <%= t('helpers.label.group.place') %>:
   <% if group.place && !group.place.blank? %>
-    Place: <%= group.place %>
+    <%= group.place %><br>
   <% else %>
-    Place: (not decided)
+    (not decided yet)<br>
   <% end %>
+  <%= t('helpers.label.group.scheduled_at') %>:
   <% if group.scheduled_at && !group.scheduled_at.nil? %>
-    Scheduled at: <%= simple_time_format(group.scheduled_at) %>
+    <%= simple_time_format(group.scheduled_at) %>
   <% else %>
-    Scheduled at: (not decided)
+    (not decided)
   <% end %>
-  </div>
   <div class="group_explanation">
   <div class="small">
     <%=simple_format(group.memo) %>
