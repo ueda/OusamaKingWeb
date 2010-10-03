@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.text_field :name, :class=>'inputbox' %>
+    <%= f.text_field :name, :class=>'rf_text inputbox' %>
   </div>
   <div class="field">
     <%= f.label :memo %><br />
@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :scheduled_at %><br />
-    <%= f.datetime_select :scheduled_at, :include_blank=>true, :start_year=>Date.today.year %>
+    <%= f.datetime_select :scheduled_at, :include_blank=>true, :start_year=>Date.today.year, :order => [:year, :month, :day] %>
   </div>
   <div class="actions">
     <%= f.submit %>

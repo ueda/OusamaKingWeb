@@ -17,6 +17,13 @@ en:
         remember_me: "remember me"
         password_confirmation: "Password confirmation"
       group:
+        name: "Name"
         scheduled_at: "Scheduled at"
         place: "Place"
+        memo: "Memo"
+  date:
+    formats:
+      default: "%Y/%m/%d/(%a)"
+      short: "%m/%d"
+      long: "%Y/%m/%d(%a)"
 

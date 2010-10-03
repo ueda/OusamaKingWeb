@@ -38,17 +38,17 @@ div.field, div.actions {
 .field_with_errors {
   /*
   padding: 2px;
-  background-color: #ff7373 ;
+  background-color: #FD7D58;
   display: table;
   */
-  color: #ff7373;
+  color: #FD7D58;
   text-decoration: underline;
   font-weight: bold;
 }
 
 #error_explanation {
   width: 450px;
-  border: 2px solid #ff7373;
+  border: 2px solid #FD7D58;
   padding: 7px;
   padding-bottom: 0;
   margin-bottom: 20px;
@@ -62,7 +62,7 @@ div.field, div.actions {
   font-size: 12px;
   margin: -7px;
   margin-bottom: 0px;
-  background-color: #ff7373;
+  background-color: #FD7D58;
   color: #fff;
 }
 
@@ -72,7 +72,7 @@ div.field, div.actions {
 }
 
 .alert {
-  color: #ff7373;
+  color: #FD7D58;
 }
 
 table.list {
@@ -98,17 +98,17 @@ table.list td {
 }
 
 .male , .male a {
-    color: #1047A9;
+    color: #99B898;
 }
 
 .female , .female a {
-    color: #EB6AA3;
+    color: #E54C60;
 }
 
 #header {
   display: block;
   padding: 10px;
-  background-color: #000;
+  background-color: #9AB377;
   color: #fff
 }
 
@@ -119,7 +119,7 @@ table.list td {
 #footer {
   display: block;
   padding: 10px;
-  background-color: #000;
+  background-color: #9AB377;
   color: #fff;
   text-align: center;
   line-height: 120%;
@@ -155,3 +155,12 @@ table.list td {
   padding: 2px;
   border: 1px solid #eee;
 }
+
+.mfmark {
+  color: #FD7D58;
+}
+
+.rf_text {
+  background-color: #E54C60;
+}
+

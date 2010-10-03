@@ -1,11 +1,12 @@
 <h2><%= t('Sign in') %></h2>
 
+<%= rfmark%> is required field.
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <p><%= f.label :email %><br />
-  <%= f.text_field :email %></p>
+  <p><%= rfmark %><%= f.label :email %><br />
+  <%= f.text_field :email, :class=>"rf_text"  %></p>
 
-  <p><%= f.label :password %><br />
-  <%= f.password_field :password %></p>
+  <p><%= rfmark %><%= f.label :password %><br />
+  <%= f.password_field :password, :class=>"rf_text" %></p>
 
   <% if devise_mapping.rememberable? -%>
     <p><%= f.check_box :remember_me %> <%= f.label :remember_me %></p>
